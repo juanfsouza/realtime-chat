@@ -18,9 +18,9 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "src/**/*.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/socketServer.mjs"],
   "exclude": ["node_modules"]
 }
