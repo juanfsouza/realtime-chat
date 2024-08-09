@@ -6,7 +6,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3000", // Permite conexões do frontend
+    origin: "http://localhost:3000",
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type"]
   }
@@ -15,9 +15,10 @@ const io = new Server(server, {
 io.on('connection', (socket) => {
   console.log('Novo cliente conectado', socket.id);
 
-  socket.on('sendMessage', (msg) => {
-    console.log('Mensagem recebida:', msg);
-    io.emit('newMessage', msg); // Emite a mensagem para todos os clientes
+  socket.on('sendMessage', (data) => {
+    // data deve ser um objeto com { message, sender }
+    console.log('Mensagem recebida:', data);
+    io.emit('newMessage', data); // Emite a mensagem com o remetente para todos os clientes
   });
 
   socket.on('disconnect', () => {

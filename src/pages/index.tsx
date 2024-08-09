@@ -1,13 +1,13 @@
 import React from 'react';
-import Chat from '../components/Chat';
+import Chatbox from '../components/Chatbox';
 import { NextPage } from 'next';
 
 const Home: NextPage = () => {
-    return (
-      <div className="h-screen bg-gray-100">
-        <Chat />
-      </div>
-    );
-  };
+  return (
+    <div className="h-screen bg-gray-100">
+      <Chatbox />
+    </div>
+  );
+};
 
 export default Home;

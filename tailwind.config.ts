@@ -9,10 +9,18 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: {
+          light: '#FFA726',
+          DEFAULT: '#FF7043',
+          dark: '#F4511E', 
+        },
+        bg: {
+          950: '#0a0a0a', 
+        },
+      },
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        'gradient-primary': 'linear-gradient(to right, #FFA726, #F4511E)',
       },
     },
   },
